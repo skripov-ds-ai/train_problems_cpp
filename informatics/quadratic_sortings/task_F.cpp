@@ -7,7 +7,6 @@
 #include <algorithm>
 #include <vector>
 
-#define SPACE " "
 #define NL '\n'
 
 using namespace std;
@@ -19,7 +18,8 @@ inline void fast_iostream() {
 }
 
 template <typename RandomAccessIterator>
-void bubble_sort(RandomAccessIterator first, RandomAccessIterator last) {
+size_t bubble_sort(RandomAccessIterator first, RandomAccessIterator last) {
+    size_t count(0);
     bool swapped = true;
     while (first != last-- && swapped) {
         swapped = false;
@@ -27,9 +27,11 @@ void bubble_sort(RandomAccessIterator first, RandomAccessIterator last) {
             if (*(i + 1) < *i) {
                 std::iter_swap(i, i + 1);
                 swapped = true;
+                count++;
             }
         }
     }
+    return count;
 }
 
 inline void solve() {
@@ -44,11 +46,5 @@ inline void solve() {
         cin >> v[i];
     }
 
-    bubble_sort(v.begin(), v.end());
-
-    for (size_t i = 0; i < v.size(); i++) {
-        cout << v[i] << SPACE;
-    }
-
-    cout << NL;
+    cout << bubble_sort(v.begin(), v.end()) << NL;
 }

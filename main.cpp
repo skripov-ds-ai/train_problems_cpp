@@ -5,7 +5,9 @@
 // #include "informatics/binary_search/binary_search_with_answer/task_B.cpp"
 // #include "informatics/binary_search/binary_search_with_answer/task_C.cpp"
 // #include "informatics/quadratic_sortings/task_A.cpp"
-#include "informatics/quadratic_sortings/task_C.cpp"
+// #include "informatics/quadratic_sortings/task_C.cpp"
+// #include "informatics/quadratic_sortings/task_E.cpp"
+#include "informatics/quadratic_sortings/task_F.cpp"
 
 #define TIME_IN_SECONDS "time = %0.9f s.\n"
 
